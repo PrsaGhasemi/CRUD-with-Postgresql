@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://parsa:asdf1234@localhost:5454/TmootyTest"
+}
+
+model Crypto {
+  id           Int           @id @unique
+  name         String
+  CryptoDetail CryptoDetail?
+}
+
+model CryptoDetail {
+  detailId Int    @id
+  price    Float
+  symbol   String
+  name     String
+  cryptoId Int    @unique
+  crypto   Crypto @relation(fields: [cryptoId], references: [id])
+}
+
+
