@@ -17,4 +17,4 @@ const deleteCrypto = (id)=> {
 }
 
 
-module .exports = {createCrypto,getCryptoById,updateCrypto,deleteCrypto}
+module.exports = {createCrypto,getCryptoById,updateCrypto,deleteCrypto}

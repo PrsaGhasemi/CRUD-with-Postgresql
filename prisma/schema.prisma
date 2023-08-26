@@ -1,3 +1,8 @@
+//* this was my first interaction with postgresql and prisma ORM
+//* although i loved every challenge it had i found it a bit hard
+//* to be able to deploy an excelent project with it. but i wish 
+//* it fullfils what it has to do even with my lack of experience
+
 generator client {
   provider = "prisma-client-js"
 }

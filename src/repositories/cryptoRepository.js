@@ -1,4 +1,5 @@
  const prisma =require('../db/prismaConnector');
+
 const createCrypto = (name, price, symbol)=> {
     return prisma.crypto.create({
         data: {

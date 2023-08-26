@@ -50,4 +50,4 @@ const deleteCrypto = async (req, res)=> {
     }
 }
 
-module .exports = {deleteCrypto,updateCrypto,createCrypto,getCrypto}
+module.exports = {deleteCrypto,updateCrypto,createCrypto,getCrypto}
