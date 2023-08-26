@@ -1,10 +1,17 @@
+#I made the docker compose file here to make it easier to inspect and analyze it
+#but i know this file can cause many security problems, we must secure sensitive
+#detail like password with external secrets management tools or Ensure that only 
+#authorized individuals have access to the Docker Compose file
+
+
 services:
   postgres:
-    container_name: postgres
+    container_name: tmootycontainer
     image: postgres
     environment:
-      - POSTGRES_USER=parsaghasemi
+    #this user is me! parsa ghasemi
+      - POSTGRES_USER=chrollolucilfer
       - POSTGRES_PASSWORD=1234
       - POSTGRES_DB=tmootybackenddb
     ports:
-      - 3000:5432
+      - 3000:5555
