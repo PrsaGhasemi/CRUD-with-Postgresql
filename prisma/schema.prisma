@@ -9,7 +9,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://parsa:asdf1234@localhost:5454/TmootyTest"
+  url      = "postgresql://chrollolucilfer:1234@tmootycontainer:3000/tmootybackenddb"
 }
 
 model Crypto {
