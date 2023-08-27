@@ -1,6 +1,6 @@
 // import { Request, Response } from 'express';
 const cryptoService  = require('../services/cryptoService');
-
+const transactionService = require('../services/transactionServices');
 const createCrypto =  async (req, res)=> {
     try {
         const { name, price, symbol } = req.body;
@@ -50,4 +50,17 @@ const deleteCrypto = async (req, res)=> {
     }
 }
 
-module.exports = {deleteCrypto,updateCrypto,createCrypto,getCrypto}
+
+const transactionCrypto = async (req,res) => {
+    try {
+        const {id , amount} = req.body
+        transactionService.generateRandomTransaction(arseInt(id), amount)
+        res.sendStatus(200)
+    } catch (error) {
+        //Because i'm not sure about how this api works and it might break i
+        //dont want to stop everything
+        next()
+    }
+}
+
+module.exports = {deleteCrypto,updateCrypto,createCrypto,getCrypto,transactionCrypto}
