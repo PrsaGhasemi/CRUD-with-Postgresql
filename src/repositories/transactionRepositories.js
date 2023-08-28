@@ -5,9 +5,7 @@ const {PrismaClient} = require('@prisma/client');
 const prisma = new PrismaClient()
 
 // Generate fake crypto bank transactions
-const { Router } = require("express");
-const router = new Router()
-router.post('/createTransactions', async (cryptoId, amount) => {
+exports.transactionOperation = async (cryptoId, amount) => {
     try {
       // Retrieve crypto details from the database based on id
       const cryptoDetail = await prisma.cryptoDetail.findUnique({
@@ -36,6 +34,5 @@ router.post('/createTransactions', async (cryptoId, amount) => {
       console.error(error);
       return res.status(500).json({ error: 'Internal server error' });
     }
-  });
+  };
   
-  module.exports = router
